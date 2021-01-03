@@ -1,12 +1,22 @@
 apply plugin: 'java'
-
-repositories {
-    mavenCentral()
-}
+apply plugin: 'application'
 
 compileJava {
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
+}
+
+application {
+    mainClassName = 'com.countwords.Main'
+}
+
+jar {
+    archiveBaseName = 'CountWords'
+    archiveVersion = '0.0.1'
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {

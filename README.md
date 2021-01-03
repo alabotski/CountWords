@@ -18,4 +18,4 @@ Unit testing is not required, but is a nice to have.
 Also it would be nice if it will be built with maven
 
 Command line parameters example for Java implementation:
-java –jar scraper.jar -F sample.txt –C -S=a,the,on,at,any
+java –jar scraper.jar -F sample.txt –C -S a,the,on,at,any
