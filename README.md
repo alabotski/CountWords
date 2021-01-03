@@ -19,3 +19,7 @@ Also it would be nice if it will be built with maven
 
 Command line parameters example for Java implementation:
 java –jar scraper.jar -F sample.txt –C -S a,the,on,at,any
+
+**How to run**
+
+`gradle run --args="-F=London.txt -C -S=a,the,on,at,any -L"`

@@ -10,20 +10,24 @@ import java.util.stream.Collectors;
 
 public class FileService {
 
-  public List<String> readFile(String fileName) {
-    if (!fileName.equals("") && Files.exists(Paths.get(fileName))) {
-      System.out.println("File exists");
+  private List<String> fileLines;
 
+  public void readFile(String fileName) {
+    if (!fileName.equals("") && Files.exists(Paths.get(fileName))) {
       Path path = Paths.get(fileName);
       try {
-        return Files.lines(path)
+        fileLines = Files.lines(path)
             .collect(Collectors.toList());
       } catch (IOException e) {
         System.out.println("Error: " + e);
-        return Collections.emptyList();
+        fileLines = Collections.emptyList();
       }
     } else {
-      return Collections.emptyList();
+      fileLines = Collections.emptyList();
     }
+  }
+
+  public List<String> getFileLines() {
+    return fileLines;
   }
 }
