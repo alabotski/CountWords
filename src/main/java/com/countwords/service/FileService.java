@@ -1,4 +1,4 @@
-package com.countwords;
+package com.countwords.service;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,7 +12,7 @@ public class FileService {
 
   private List<String> fileLines;
 
-  public void readFile(String fileName) {
+  public FileService(String fileName) {
     if (!fileName.equals("") && Files.exists(Paths.get(fileName))) {
       Path path = Paths.get(fileName);
       try {

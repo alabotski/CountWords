@@ -7,7 +7,7 @@ compileJava {
 }
 
 application {
-    mainClassName = 'com.countwords.Main'
+    mainClassName = 'com.countwords.CountWords'
 }
 
 jar {
